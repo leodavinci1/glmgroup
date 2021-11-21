@@ -31,7 +31,7 @@ class TeamOne extends React.Component {
     `;
     const TeamContainer = styled.div`
       @media (max-width: 767px) {
-        padding: 0 50px;
+        padding: 0 25px;
       }
       .slick-dots {
         li button:before,

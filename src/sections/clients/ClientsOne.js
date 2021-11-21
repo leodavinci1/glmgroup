@@ -63,7 +63,7 @@ class ClientsOne extends React.Component {
     `;
 
     return (
-      <Section id="clients">
+      <Section id="partners">
         <Container>
           <Row>
             <LeftCol md={6}>

@@ -57,7 +57,7 @@ class Hero extends React.Component {
       font-family: "Kanit", sans-serif;
       line-height: 40px;
       color: #fff;
-      font-weight: 400;
+      font-weight: 700;
       text-transform: uppercase;
       @media (min-width: 768px) {
         margin-left: 4px;
@@ -180,7 +180,7 @@ class Hero extends React.Component {
     `;
     const ServiceHeading = styled.h4`
       font-size: 30px;
-      font-weight: 400;
+      font-weight: 700;
       font-family: "Kanit", sans-serif;
     `;
     const ServiceSeparator = styled.div`

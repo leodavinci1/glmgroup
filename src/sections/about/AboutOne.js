@@ -270,6 +270,12 @@ class AboutOne extends React.Component {
                   </AnimationContainer>
                 </Col>
               </Row>
+              <Row>
+                <Col md={12}>first</Col>
+              </Row>
+              <Row>
+                <Col md={12}>second</Col>
+              </Row>
             </Col>
           </Row>
         </AboutContainer>

@@ -69,7 +69,7 @@ class PortfolioItem extends React.Component {
     const SubHeading = styled.h5`
       color: #fff;
       font-size: 20px;
-      font-weight: 400;
+      font-weight: 700;
       text-transform: uppercase;
     `;
 
@@ -101,6 +101,7 @@ class PortfolioItem extends React.Component {
         max-height: 600px;
       }
       @media (max-width: 1024px) {
+        max-width: 100%;
         min-height: 400px;
         max-height: 400px;
       }
@@ -136,7 +137,7 @@ class PortfolioItem extends React.Component {
 
     if (this.props.type === "slider") {
       return (
-        <a href={this.props.link} target="_blank" rel="noopener noreferrer">
+        <a href={this.props.link}>
           <Tilt options={{ scale: 1, max: 10 }}>
             <Item className="blue-shadow">
               {this.showImage()}
@@ -158,7 +159,7 @@ class PortfolioItem extends React.Component {
       );
     } else {
       return (
-        <a href={this.props.link} target="_blank" rel="noopener noreferrer">
+        <a href={this.props.link}>
           <Tilt options={{ scale: 1, max: 10 }}>
             <Item
               className={`${

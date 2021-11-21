@@ -15,7 +15,7 @@ export default class HTML extends React.Component {
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
           <link
-            href="https://fonts.googleapis.com/css2?family=Kanit:wght@800&family=Overlock&family=Questrial&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;700&family=Overlock&family=Questrial&display=swap"
             rel="stylesheet"
           />
         </head>

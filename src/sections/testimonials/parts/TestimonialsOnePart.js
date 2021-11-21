@@ -79,7 +79,7 @@ class TestimonialPart extends React.Component {
     const TestimonialText = styled.p`
       color: #333;
       font-size: 25px;
-      font-weight: 400;
+      font-weight: 700;
       line-height: 35px;
       text-align: center;
       @media (max-width: 500px) {

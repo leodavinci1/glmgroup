@@ -75,7 +75,7 @@ class DesktopContent extends React.Component {
     const SubHeading = styled.h5`
       color: #fff;
       font-size: 20px;
-      font-weight: 400;
+      font-weight: 700;
       text-transform: uppercase;
       text-align: center;
       @media (max-width: 767px) {

@@ -72,7 +72,7 @@ class TeamItem extends React.Component {
     const Profession = styled.h5`
       color: #fff;
       font-size: 14px;
-      font-weight: 400;
+      font-weight: 700;
       text-transform: uppercase;
     `;
 

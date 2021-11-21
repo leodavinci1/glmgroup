@@ -14,7 +14,6 @@ class ContactOneForm extends React.Component {
   }
 
   formSubmit() {
-    console.log("aosdjoaisdoiasdjoa");
     if (
       this.state.name === "" ||
       this.state.email === "" ||

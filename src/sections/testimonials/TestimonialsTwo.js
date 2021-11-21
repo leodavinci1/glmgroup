@@ -157,7 +157,7 @@ class TestimonialsTwo extends React.Component {
     const TestimonialText = styled.p`
       color: #333;
       font-size: 18px;
-      font-weight: 400;
+      font-weight: 700;
       line-height: 25px;
       text-align: center;
     `;

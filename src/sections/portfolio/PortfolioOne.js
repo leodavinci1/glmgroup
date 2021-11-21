@@ -14,12 +14,12 @@ class PortfolioOne extends React.Component {
     const PortfolioContainer = styled.div`
       padding: 0 50px;
       @media (max-width: 767px) {
-        padding: 0 50px;
+        padding: 0 25px;
       }
     `;
 
     return (
-      <Section id="portfolio">
+      <Section id="clients">
         <Col md={12}>
           <Container>
             <AnimatedHeading text="Our main acts" />
