@@ -21,9 +21,9 @@ class Index extends React.Component {
         <Layout
           isHome={true}
           sections={["home", "clients", "team", "partners", "contact"]}
+          pages={["Music", "Talent", "Literary"]}
         >
           <Hero />
-          <PortfolioOne />
           <TeamTwo />
           <ClientsOne />
           <ContactCreative />

@@ -11,6 +11,7 @@ class Navbar extends React.Component {
     this.state = {
       collapse: false,
       sticky: false,
+      pages: this.props.pages,
       sections: this.props.sections
         ? this.props.sections
         : [
@@ -207,13 +208,29 @@ class Navbar extends React.Component {
       }
     `;
 
-    return this.state.sections.map((value, index) => {
+    const pages = this.state.pages.map((value, index) => {
+      return (
+        <NavItem
+          key={index}
+          onClick={function () {
+            window.location.href = `./${value.toLowerCase()}`;
+          }}
+        >
+          {value}
+        </NavItem>
+      );
+    });
+
+    const sections = this.state.sections.map((value, index) => {
       return (
         <NavItem key={index} onClick={() => this.navigate(value)}>
           {value}
         </NavItem>
       );
     });
+
+    const navItems = [...pages, ...sections];
+    return navItems;
   }
 }
 

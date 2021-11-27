@@ -3,13 +3,18 @@ module.exports = {
     title: "Good Life Management",
     description: "Good Life Management website",
   },
-  pathPrefix: "/",
   plugins: [
     {
       resolve: "gatsby-source-filesystem",
       options: {
         path: `${__dirname}/content/images/`,
         name: "images",
+      },
+    },
+    {
+      resolve: `gatsby-plugin-s3`,
+      options: {
+        bucketName: "codingleo",
       },
     },
     {

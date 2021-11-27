@@ -5,6 +5,8 @@ import styled from "styled-components";
 import img1 from "../../static/img/galvinmagnus.jpg";
 import img2 from "../../static/img/galvinmagnus2.jpg";
 import logo from "../../static/img/logo.png";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "scss/abstract.scss";
 
 class SelfishSons extends React.Component {
   constructor(props) {
@@ -97,7 +99,7 @@ class SelfishSons extends React.Component {
     return (
       <div>
         <Helmet>
-          <title>Selfish Sons</title>
+          <title>Gavin Magnus</title>
           <meta name="description" content="Page not found" />
         </Helmet>
         <Main>
@@ -106,7 +108,7 @@ class SelfishSons extends React.Component {
           </LogoWrapper>
           <Container>
             <Content>
-              <Heading1>Galvin Magnus</Heading1>
+              <Heading1>Gavin Magnus</Heading1>
 
               <Img src={img1} />
               <TextContent style={{ marginTop: "50px" }}>

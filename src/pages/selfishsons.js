@@ -6,6 +6,8 @@ import img1 from "../../static/img/selfishsons1.png";
 import img2 from "../../static/img/selfishsons2.png";
 import img3 from "../../static/img/selfishsons3.png";
 import logo from "../../static/img/logo.png";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "scss/abstract.scss";
 
 class SelfishSons extends React.Component {
   constructor(props) {

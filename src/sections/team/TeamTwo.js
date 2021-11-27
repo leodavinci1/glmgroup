@@ -8,6 +8,32 @@ import firstPortraitImg from "../../../static/img/firstPortrait.png";
 import secondPortraitImg from "../../../static/img/secondPortrait.png";
 
 class TeamTwo extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      height: 0,
+      width: 0,
+    };
+  }
+
+  updateDimensions = () => {
+    if (this.state.height !== window.innerHeight) {
+      this.setState({ height: window.innerHeight });
+    }
+    if (this.state.width !== window.innerWidth) {
+      this.setState({ width: window.innerWidth });
+    }
+  };
+
+  componentDidMount() {
+    this.setState({ height: window.innerHeight, width: window.innerWidth });
+    window.addEventListener("resize", this.updateDimensions);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.updateDimensions);
+  }
+
   shouldComponentUpdate() {
     return false;
   }
@@ -70,7 +96,23 @@ class TeamTwo extends React.Component {
       line-height: 28px;
     `;
 
-    const isBrowser = () => typeof window !== "undefined";
+    const DesktopBlock = styled.div`
+      display: flex;
+      flex-direction: row;
+      @media (max-width: 600px) {
+        display: none;
+      }
+    `;
+
+    const MobileBlock = styled.div`
+      display: none;
+      @media (max-width: 600px) {
+        display: flex;
+        flex-direction: column;
+      }
+    `;
+
+    console.log(this.state.width);
 
     return (
       <Section id="team">
@@ -104,54 +146,53 @@ class TeamTwo extends React.Component {
                   </ContentContainer>
                 </Col>
               </Row>
+              <MobileBlock>
+                <Row style={{ marginBottom: "80px", alignItems: "center" }}>
+                  <Col md={6}>
+                    <ImageContainer>
+                      <FirstPortrait src={secondPortraitImg} />
+                    </ImageContainer>
+                  </Col>
+                  <Col md={6}>
+                    <ContentContainer>
+                      <Title>Arlene Silguero</Title>
+                      <Bio>
+                        Arlene's music management portfolio includes songwriters
+                        and performers, alike. From pop to rock to rap, she
+                        represents artists from around the globe. Her expertise
+                        is in A&R, collaborations, artist development, and
+                        negotiations. An entrepreneur at heart, Arlene has
+                        launched and managed successful businesses in real
+                        estate and merchandising.
+                      </Bio>
+                    </ContentContainer>
+                  </Col>
+                </Row>
+              </MobileBlock>
 
-              <Row style={{ marginBottom: "80px", alignItems: "center" }}>
-                {isBrowser() && window.screen.width < 600 ? (
-                  <>
-                    <Col md={6}>
-                      <ImageContainer>
-                        <FirstPortrait src={secondPortraitImg} />
-                      </ImageContainer>
-                    </Col>
-                    <Col md={6}>
-                      <ContentContainer>
-                        <Title>Arlene Silguero</Title>
-                        <Bio>
-                          Arlene's music management portfolio includes
-                          songwriters and performers, alike. From pop to rock to
-                          rap, she represents artists from around the globe. Her
-                          expertise is in A&R, collaborations, artist
-                          development, and negotiations. An entrepreneur at
-                          heart, Arlene has launched and managed successful
-                          businesses in real estate and merchandising.
-                        </Bio>
-                      </ContentContainer>
-                    </Col>
-                  </>
-                ) : (
-                  <>
-                    <Col md={6}>
-                      <ContentContainer>
-                        <Title>Arlene Silguero</Title>
-                        <Bio>
-                          Arlene's music management portfolio includes
-                          songwriters and performers, alike. From pop to rock to
-                          rap, she represents artists from around the globe. Her
-                          expertise is in A&R, collaborations, artist
-                          development, and negotiations. An entrepreneur at
-                          heart, Arlene has launched and managed successful
-                          businesses in real estate and merchandising.
-                        </Bio>
-                      </ContentContainer>
-                    </Col>
-                    <Col md={6}>
-                      <ImageContainer>
-                        <FirstPortrait src={secondPortraitImg} />
-                      </ImageContainer>
-                    </Col>
-                  </>
-                )}
-              </Row>
+              <DesktopBlock>
+                <Row style={{ marginBottom: "80px", alignItems: "center" }}>
+                  <Col md={6}>
+                    <ContentContainer>
+                      <Title>Arlene Silguero</Title>
+                      <Bio>
+                        Arlene's music management portfolio includes songwriters
+                        and performers, alike. From pop to rock to rap, she
+                        represents artists from around the globe. Her expertise
+                        is in A&R, collaborations, artist development, and
+                        negotiations. An entrepreneur at heart, Arlene has
+                        launched and managed successful businesses in real
+                        estate and merchandising.
+                      </Bio>
+                    </ContentContainer>
+                  </Col>
+                  <Col md={6}>
+                    <ImageContainer>
+                      <FirstPortrait src={secondPortraitImg} />
+                    </ImageContainer>
+                  </Col>
+                </Row>
+              </DesktopBlock>
             </Container>
           </TeamContainer>
         </Col>

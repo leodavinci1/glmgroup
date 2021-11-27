@@ -1,9 +1,8 @@
 import React from "react";
-import { Row, Col, Container } from "react-bootstrap";
+import { Col, Container } from "react-bootstrap";
 import { StaticQuery, graphql } from "gatsby";
 import background from "../../../static/img/3511063.webp";
 import styled from "styled-components";
-import Typewriter from "typewriter-effect";
 
 class Hero extends React.Component {
   constructor(props) {
@@ -207,7 +206,7 @@ class Hero extends React.Component {
       <Section id="home">
         <Overlay
           style={{
-            height: `${this.state.width > 500 ? this.state.height : 350}px`,
+            height: `100vh`,
           }}
         >
           <Container>

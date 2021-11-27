@@ -8,8 +8,12 @@ import AnimatedHeading from "components/animated-heading";
 class PortfolioOne extends React.Component {
   render() {
     const Section = styled.section`
+      width: 100vw;
       background-color: #050505;
       padding: 100px 0;
+      @media (max-width: 767px) {
+        padding: 180px 0;
+      }
     `;
     const PortfolioContainer = styled.div`
       padding: 0 50px;
@@ -22,7 +26,7 @@ class PortfolioOne extends React.Component {
       <Section id="clients">
         <Col md={12}>
           <Container>
-            <AnimatedHeading text="Our main acts" />
+            <AnimatedHeading text={this.props.title} />
           </Container>
           <PortfolioContainer>
             <Row>{this.portfolio()}</Row>
@@ -38,14 +42,19 @@ class PortfolioOne extends React.Component {
     return items.map((value, index) => {
       return (
         <Col md={4} key={index}>
-          <PortfolioItem
-            index={index}
-            image={value.content.frontmatter.image.childImageSharp.fluid.src}
-            text={value.content.frontmatter.title}
-            category={value.content.frontmatter.category}
-            link={value.content.frontmatter.link}
-            type="col"
-          />
+          {this.props.title.toUpperCase() ===
+          value.content.frontmatter.category ? (
+            <PortfolioItem
+              index={index}
+              image={value.content.frontmatter.image.childImageSharp.fluid.src}
+              text={value.content.frontmatter.title}
+              category={value.content.frontmatter.category}
+              link={value.content.frontmatter.link}
+              type="col"
+            />
+          ) : (
+            <></>
+          )}
         </Col>
       );
     });

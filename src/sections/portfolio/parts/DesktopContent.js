@@ -1,6 +1,5 @@
 import React from "react";
-import styled, { keyframes } from "styled-components";
-import Baffle from "baffle-react";
+import styled from "styled-components";
 
 class DesktopContent extends React.Component {
   constructor(props) {
@@ -16,37 +15,26 @@ class DesktopContent extends React.Component {
   };
 
   render() {
-    const Animation = keyframes`
-            0% {
-                opacity: 0;
-            }
-            100% {
-                top: 0;
-                opacity: 1;
-            }
-        `;
     const Text = styled.div`
       @media (max-width: 1024px) {
         display: none !important;
       }
+      background-image: linear-gradient(
+        to top,
+        rgb(166, 124, 0),
+        rgba(255, 255, 255, 0)
+      );
       position: absolute;
+      top: 0;
+      opacity: 1;
       height: 100%;
       width: 100%;
-      top: 40px;
       align-items: center;
       flex-direction: column;
       justify-content: flex-end;
       transition: 0.5s;
       text-align: center;
       display: flex;
-      &.active {
-        animation: ${Animation} 1s forwards;
-        background-image: linear-gradient(
-          to top,
-          rgb(166, 124, 0),
-          rgba(255, 255, 255, 0)
-        );
-      }
     `;
 
     return (
@@ -82,36 +70,12 @@ class DesktopContent extends React.Component {
         font-size: 15px;
       }
     `;
-    if (this.state.show) {
-      return (
-        <>
-          <Heading>
-            <Baffle
-              speed={50}
-              characters="AaBbCcDeEeFfGgHhIiJjKkLlMmNnOpPpQqRrSsTtUuVvWwXxYyZ"
-              obfuscate={false}
-              update={true}
-              revealDuration={1000}
-              revealDelay={0}
-            >
-              {this.props.text}
-            </Baffle>
-          </Heading>
-          <SubHeading>
-            <Baffle
-              speed={50}
-              characters="AaBbCcDeEeFfGgHhIiJjKkLlMmNnOpPpQqRrSsTtUuVvWwXxYyZ"
-              obfuscate={false}
-              update={true}
-              revealDuration={1000}
-              revealDelay={0}
-            >
-              {this.props.category}
-            </Baffle>
-          </SubHeading>
-        </>
-      );
-    }
+    return (
+      <>
+        <Heading>{this.props.text}</Heading>
+        <SubHeading>{this.props.category}</SubHeading>
+      </>
+    );
   }
 }
 

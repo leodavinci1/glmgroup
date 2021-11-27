@@ -6,8 +6,10 @@ import img1 from "../../static/img/belaro1.png";
 import img2 from "../../static/img/belaro2.png";
 import img3 from "../../static/img/belaro3.png";
 import logo from "../../static/img/logo.png";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "scss/abstract.scss";
 
-class SelfishSons extends React.Component {
+class Belaro extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -99,7 +101,7 @@ class SelfishSons extends React.Component {
     return (
       <div>
         <Helmet>
-          <title>Selfish Sons</title>
+          <title>BELARO</title>
           <meta name="description" content="Page not found" />
         </Helmet>
         <Main>
@@ -149,4 +151,4 @@ class SelfishSons extends React.Component {
   }
 }
 
-export default SelfishSons;
+export default Belaro;

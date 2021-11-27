@@ -55,7 +55,7 @@ class PortfolioItem extends React.Component {
         `;
 
     const Text = styled.div`
-      transform: translateY(50px);
+      transform: translateY(0);
       transition: 0.5s;
       width: 100%;
       text-align: center;
@@ -78,7 +78,7 @@ class PortfolioItem extends React.Component {
       height: 100%;
       width: 100%;
       top: 0;
-      opacity: 0 !important;
+      opacity: 1;
       transition: 0.5s;
       display: flex;
       align-items: flex-end;

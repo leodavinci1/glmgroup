@@ -17,7 +17,7 @@ class ClientsOne extends React.Component {
             background-size: cover;
             padding: 100px 0;
             .heading {
-                width: 100%;
+              width: 100%;
             }
           }
         `;
@@ -62,6 +62,22 @@ class ClientsOne extends React.Component {
       align-items: center;
     `;
 
+    const ClientsRow = styled.div`
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: -15px;
+      margin-left: -15px;
+
+      @media (max-width: 767px) {
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-flow: row dense;
+        grid-gap: 0.5rem;
+        padding: 0 20px;
+      }
+    `;
+
     return (
       <Section id="partners">
         <Container>
@@ -72,7 +88,7 @@ class ClientsOne extends React.Component {
               </Heading>
             </LeftCol>
             <Col md={6}>
-              <Row>{this.clients()}</Row>
+              <ClientsRow>{this.clients()}</ClientsRow>
             </Col>
           </Row>
         </Container>
