@@ -134,8 +134,9 @@ class PortfolioItem extends React.Component {
         }
       }
     `;
-
+    console.log(this.props);
     if (this.props.type === "slider") {
+      console.log(this.props);
       return (
         <a href={this.props.link}>
           <Tilt options={{ scale: 1, max: 10 }}>
@@ -144,12 +145,12 @@ class PortfolioItem extends React.Component {
               <MobileContent>
                 <Text>
                   <Heading>{this.props.text}</Heading>
-                  <SubHeading>{this.props.category}</SubHeading>
+                  <SubHeading>{this.props.description}</SubHeading>
                 </Text>
               </MobileContent>
               <DesktopContent
                 text={this.props.text}
-                category={this.props.category}
+                category={this.props.description}
                 ref={(cd) => (this.child = cd)}
                 type={this.props.type}
               />
@@ -171,12 +172,12 @@ class PortfolioItem extends React.Component {
               <MobileContent>
                 <Text>
                   <Heading>{this.props.text}</Heading>
-                  <SubHeading>{this.props.category}</SubHeading>
+                  <SubHeading>{this.props.description}</SubHeading>
                 </Text>
               </MobileContent>
               <DesktopContent
                 text={this.props.text}
-                category={this.props.category}
+                category={this.props.description}
                 ref={(cd) => (this.child = cd)}
                 type={this.props.type}
               />

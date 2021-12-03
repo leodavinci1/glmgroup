@@ -58,7 +58,8 @@ class ContactCreative extends React.Component {
     `;
 
     const InfoPart = styled.div`
-      min-height: 250px;
+      padding-top: 10px;
+      min-height: 100px;
       background-color: #111;
       border: 2px solid #444;
     `;
@@ -77,7 +78,6 @@ class ContactCreative extends React.Component {
 
     const Info = styled.div`
       position: relative;
-      bottom: 30px;
     `;
 
     const InfoLinkContainer = styled.div`
@@ -107,9 +107,6 @@ class ContactCreative extends React.Component {
             <IconCol md={6}>
               <AnimationContainer animation="fadeIn" delay={500}>
                 <InfoPart>
-                  <IconContainer>
-                    <Icon src={emailIcon} alt="email" />
-                  </IconContainer>
                   <Info>
                     <InfoTitle>Email</InfoTitle>
                     <InfoLinkContainer>
@@ -124,9 +121,6 @@ class ContactCreative extends React.Component {
             <IconCol md={6}>
               <AnimationContainer animation="fadeIn" delay={1000}>
                 <InfoPart>
-                  <IconContainer>
-                    <Icon src={phoneIcon} alt="phone" />
-                  </IconContainer>
                   <Info>
                     <InfoTitle>Phone</InfoTitle>
                     <InfoLinkContainer>

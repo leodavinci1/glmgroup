@@ -4,6 +4,7 @@ import styled from "styled-components";
 import PortfolioOne from "sections/portfolio/PortfolioOne.js";
 import logo from "../../static/img/logo.png";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Layout from "components/layout";
 import "scss/abstract.scss";
 
 class Literary extends React.Component {
@@ -96,14 +97,17 @@ class Literary extends React.Component {
           <title>Literary</title>
           <meta name="description" content="Page not found" />
         </Helmet>
-        <Main>
-          <LogoWrapper href="/" className="logo">
-            <Logo src={logo} alt="logo" />
-          </LogoWrapper>
-          <Content>
-            <PortfolioOne title="Literary" />
-          </Content>
-        </Main>
+        <Layout
+          isHome={false}
+          sections={[]}
+          pages={["Music", "Talent", "Literary"]}
+        >
+          <Main>
+            <Content>
+              <PortfolioOne title="Literary" />
+            </Content>
+          </Main>
+        </Layout>
       </div>
     );
   }

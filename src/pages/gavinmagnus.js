@@ -4,6 +4,7 @@ import { Container } from "react-bootstrap";
 import styled from "styled-components";
 import img1 from "../../static/img/galvinmagnus.jpg";
 import img2 from "../../static/img/galvinmagnus2.jpg";
+import Layout from "components/layout";
 import logo from "../../static/img/logo.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "scss/abstract.scss";
@@ -43,6 +44,7 @@ class SelfishSons extends React.Component {
     `;
 
     const Main = styled.div`
+      padding-top: 100px;
       width: 100%;
       display: flex;
       align-items: center;
@@ -102,44 +104,49 @@ class SelfishSons extends React.Component {
           <title>Gavin Magnus</title>
           <meta name="description" content="Page not found" />
         </Helmet>
-        <Main>
-          <LogoWrapper href="/" className="logo">
-            <Logo src={logo} alt="logo" />
-          </LogoWrapper>
-          <Container>
-            <Content>
-              <Heading1>Gavin Magnus</Heading1>
+        <Layout
+          isHome={false}
+          sections={[]}
+          pages={["Music", "Talent", "Literary"]}
+        >
+          <Main>
+            <Container>
+              <Content>
+                <Heading1>Gavin Magnus</Heading1>
 
-              <Img src={img1} />
-              <TextContent style={{ marginTop: "50px" }}>
-                Gavin Magnus is known for being a rap artist and huge social
-                media star on YouTube, Instagram, and Tik Tok. His social media
-                channels generated over 50 million views and have reached over
-                ten million incredible fans across YouTube, Instagram and Tik
-                Tok. He is also known for featured films such as his role of
-                Byron in "Timecrafters" a film alongside Denise Richards. Gavin
-                toured in the Boys Of Summer Tour in 2018, and signed a record
-                deal with Columbia Records, making him one of their youngest
-                signed artists to date. Released a cover “Senorita” featuring
-                Coco Quinn.
-              </TextContent>
+                <Img src={img1} />
+                <TextContent style={{ marginTop: "50px" }}>
+                  Gavin Magnus is known for being a rap artist and huge social
+                  media star on YouTube, Instagram, and Tik Tok. His social
+                  media channels generated over 50 million views and have
+                  reached over ten million incredible fans across YouTube,
+                  Instagram and Tik Tok. He is also known for featured films
+                  such as his role of Byron in "Timecrafters" a film alongside
+                  Denise Richards. Gavin toured in the Boys Of Summer Tour in
+                  2018, and signed a record deal with Columbia Records, making
+                  him one of their youngest signed artists to date. Released a
+                  cover “Senorita” featuring Coco Quinn.
+                </TextContent>
 
-              <Img src={img2} />
+                <Img src={img2} />
 
-              <TextContent style={{ marginTop: "50px", marginBottom: "150px" }}>
-                Senorita has now reached more than 60 million views in two
-                years. He was recently ranked #1 for 'most popular 14 year old'
-                on Famous Birthdays. Gavin has 14 music videos, most of which
-                have gone viral, making him a music teen icon. Recently, his
-                viral song “Hearts On A Pendant” was featured on MTV’s Siesta
-                Key. Most importantly, Gavin is an animal activist, often
-                involved in hospitals charity events with a huge heart for
-                helping others and has used his influence several times to raise
-                awareness for school harassment.
-              </TextContent>
-            </Content>
-          </Container>
-        </Main>
+                <TextContent
+                  style={{ marginTop: "50px", marginBottom: "150px" }}
+                >
+                  Senorita has now reached more than 60 million views in two
+                  years. He was recently ranked #1 for 'most popular 14 year
+                  old' on Famous Birthdays. Gavin has 14 music videos, most of
+                  which have gone viral, making him a music teen icon. Recently,
+                  his viral song “Hearts On A Pendant” was featured on MTV’s
+                  Siesta Key. Most importantly, Gavin is an animal activist,
+                  often involved in hospitals charity events with a huge heart
+                  for helping others and has used his influence several times to
+                  raise awareness for school harassment.
+                </TextContent>
+              </Content>
+            </Container>
+          </Main>
+        </Layout>
       </div>
     );
   }

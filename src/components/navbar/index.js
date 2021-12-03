@@ -109,6 +109,7 @@ class Navbar extends React.Component {
     `;
 
     const LogoWrapper = styled.div`
+      cursor: pointer;
       flex: 0 0 20%;
       max-width: 20%;
       display: flex;
@@ -147,7 +148,12 @@ class Navbar extends React.Component {
         className={`header${this.state.sticky === true ? " sticky" : ""}`}
       >
         <NavbarContainer>
-          <LogoWrapper className="logo">
+          <LogoWrapper
+            className="logo"
+            onClick={function () {
+              window.location.href = `/`;
+            }}
+          >
             <Logo src="/img/logo.png" alt="logo" />
           </LogoWrapper>
           <Toggler
@@ -213,7 +219,7 @@ class Navbar extends React.Component {
         <NavItem
           key={index}
           onClick={function () {
-            window.location.href = `./${value.toLowerCase()}`;
+            window.location.href = `/${value.toLowerCase()}`;
           }}
         >
           {value}

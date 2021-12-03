@@ -1,6 +1,7 @@
 import React from "react";
 import Helmet from "react-helmet";
 import { Container } from "react-bootstrap";
+import Layout from "components/layout";
 import styled from "styled-components";
 import img1 from "../../static/img/belaro1.png";
 import img2 from "../../static/img/belaro2.png";
@@ -45,6 +46,7 @@ class Belaro extends React.Component {
 
     const Main = styled.div`
       width: 100%;
+      padding-top: 100px;
       display: flex;
       align-items: center;
       background-color: #000;
@@ -104,48 +106,54 @@ class Belaro extends React.Component {
           <title>BELARO</title>
           <meta name="description" content="Page not found" />
         </Helmet>
-        <Main>
-          <LogoWrapper href="/" className="logo">
-            <Logo src={logo} alt="logo" />
-          </LogoWrapper>
-          <Container>
-            <Content>
-              <Heading1>Belaro</Heading1>
+        <Layout
+          isHome={false}
+          sections={[]}
+          pages={["Music", "Talent", "Literary"]}
+        >
+          <Main>
+            <Container>
+              <Content>
+                <Heading1>Belaro</Heading1>
 
-              <Img src={img1} />
-              <TextContent style={{ marginTop: "50px" }}>
-                "BELARO has so much talent. Artistically, she’s absolutely
-                brilliant" (LeFutureWave). "This is just pop at its finest"
-                (A1234)! Blogs worldwide have discovered all the assets in
-                BELARO which they look for in the biggest stars. But perhaps the
-                LA powerhouse singer and songwriter's equally great achievements
-                of late have been her placements on much coveted Spotify
-                editorial playlists "just hits," "Fresh Finds" and "Fresh Finds:
-                Pop."
-              </TextContent>
+                <Img src={img1} />
+                <TextContent style={{ marginTop: "50px" }}>
+                  "BELARO has so much talent. Artistically, she’s absolutely
+                  brilliant" (LeFutureWave). "This is just pop at its finest"
+                  (A1234)! Blogs worldwide have discovered all the assets in
+                  BELARO which they look for in the biggest stars. But perhaps
+                  the LA powerhouse singer and songwriter's equally great
+                  achievements of late have been her placements on much coveted
+                  Spotify editorial playlists "just hits," "Fresh Finds" and
+                  "Fresh Finds: Pop."
+                </TextContent>
 
-              <Img src={img2} />
+                <Img src={img2} />
 
-              <TextContent style={{ marginTop: "50px" }}>
-                On October 15, BELARO is set to release her 5th single “Sober.”
-                A collaboration with legendary, multi-platinum and 2 time Grammy
-                nominated producer/songwriter Colby O’Donis who is also featured
-                on Lady Gaga’s breakout hit “Just Dance”, the pop banger
-                promises to appeal to all ages and demographics alike.
-              </TextContent>
+                <TextContent style={{ marginTop: "50px" }}>
+                  On October 15, BELARO is set to release her 5th single
+                  “Sober.” A collaboration with legendary, multi-platinum and 2
+                  time Grammy nominated producer/songwriter Colby O’Donis who is
+                  also featured on Lady Gaga’s breakout hit “Just Dance”, the
+                  pop banger promises to appeal to all ages and demographics
+                  alike.
+                </TextContent>
 
-              <Img src={img3} />
+                <Img src={img3} />
 
-              <TextContent style={{ marginTop: "50px", marginBottom: "150px" }}>
-                BELARO has a tradition of crossing genres with her previous
-                singles “Grateful”, a pop-trap ballad with a gospel touch,
-                “Scarlet”, a modernized version of Dolly Parton's Jolene, and
-                “Forever”, a disco-pop anthem with a relatable message about
-                breaking up from toxic relationships.
-              </TextContent>
-            </Content>
-          </Container>
-        </Main>
+                <TextContent
+                  style={{ marginTop: "50px", marginBottom: "150px" }}
+                >
+                  BELARO has a tradition of crossing genres with her previous
+                  singles “Grateful”, a pop-trap ballad with a gospel touch,
+                  “Scarlet”, a modernized version of Dolly Parton's Jolene, and
+                  “Forever”, a disco-pop anthem with a relatable message about
+                  breaking up from toxic relationships.
+                </TextContent>
+              </Content>
+            </Container>
+          </Main>
+        </Layout>
       </div>
     );
   }

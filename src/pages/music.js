@@ -4,6 +4,7 @@ import styled from "styled-components";
 import PortfolioOne from "sections/portfolio/PortfolioOne.js";
 import logo from "../../static/img/logo.png";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Layout from "components/layout";
 import "scss/abstract.scss";
 
 class Music extends React.Component {
@@ -85,12 +86,15 @@ class Music extends React.Component {
           <meta name="description" content="Music from GLM" />
         </Helmet>
         <Main>
-          <LogoWrapper href="/" className="logo">
-            <Logo src={logo} alt="logo" />
-          </LogoWrapper>
-          <Content>
-            <PortfolioOne title="Music" />
-          </Content>
+          <Layout
+            isHome={false}
+            sections={[]}
+            pages={["Music", "Talent", "Literary"]}
+          >
+            <Content>
+              <PortfolioOne title="Music" />
+            </Content>
+          </Layout>
         </Main>
       </div>
     );

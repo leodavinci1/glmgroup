@@ -39,25 +39,32 @@ class PortfolioOne extends React.Component {
   portfolio() {
     const { items } = this.props;
 
-    return items.map((value, index) => {
-      return (
-        <Col md={4} key={index}>
-          {this.props.title.toUpperCase() ===
+    return items
+      .map((value, index) => {
+        console.log(
+          "this.props.title.toUpperCase()",
+          this.props.title.toUpperCase()
+        );
+        console.log(
+          "value.content.frontmatter.category",
+          value.content.frontmatter.category
+        );
+        return this.props.title.toUpperCase() ===
           value.content.frontmatter.category ? (
+          <Col md={4} key={index}>
             <PortfolioItem
               index={index}
               image={value.content.frontmatter.image.childImageSharp.fluid.src}
               text={value.content.frontmatter.title}
               category={value.content.frontmatter.category}
+              description={value.content.frontmatter.description}
               link={value.content.frontmatter.link}
               type="col"
             />
-          ) : (
-            <></>
-          )}
-        </Col>
-      );
-    });
+          </Col>
+        ) : null;
+      })
+      .filter((item) => item);
   }
 }
 
@@ -68,7 +75,7 @@ export default (props) => (
         items: allMarkdownRemark(
           filter: { fileAbsolutePath: { regex: "/(portfolio)/" } }
           sort: { fields: [frontmatter___id], order: ASC }
-          limit: 6
+          limit: 50
         ) {
           edges {
             content: node {
@@ -76,6 +83,7 @@ export default (props) => (
                 id
                 title
                 category
+                description
                 link
                 image {
                   childImageSharp {

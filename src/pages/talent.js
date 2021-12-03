@@ -8,6 +8,7 @@ import img2 from "../../static/img/belaro2.png";
 import img3 from "../../static/img/belaro3.png";
 import logo from "../../static/img/logo.png";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Layout from "components/layout";
 import "scss/abstract.scss";
 
 class Talent extends React.Component {
@@ -99,14 +100,17 @@ class Talent extends React.Component {
           <title>Talent</title>
           <meta name="description" content="Page not found" />
         </Helmet>
-        <Main>
-          <LogoWrapper href="/" className="logo">
-            <Logo src={logo} alt="logo" />
-          </LogoWrapper>
-          <Content>
-            <PortfolioOne title="Talent" />
-          </Content>
-        </Main>
+        <Layout
+          isHome={false}
+          sections={[]}
+          pages={["Music", "Talent", "Literary"]}
+        >
+          <Main>
+            <Content>
+              <PortfolioOne title="Talent" />
+            </Content>
+          </Main>
+        </Layout>
       </div>
     );
   }
