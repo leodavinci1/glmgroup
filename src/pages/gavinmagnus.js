@@ -4,10 +4,22 @@ import { Container } from "react-bootstrap";
 import styled from "styled-components";
 import img1 from "../../static/img/galvinmagnus.jpg";
 import img2 from "../../static/img/galvinmagnus2.jpg";
+import "react-image-gallery/styles/css/image-gallery.css";
+
 import Layout from "components/layout";
 import logo from "../../static/img/logo.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "scss/abstract.scss";
+import ImageGallery from "react-image-gallery";
+
+const images = [
+  {
+    original: img1,
+  },
+  {
+    original: img2,
+  },
+];
 
 class SelfishSons extends React.Component {
   constructor(props) {
@@ -27,6 +39,7 @@ class SelfishSons extends React.Component {
       font-weight: 700;
       text-transform: uppercase;
       text-align: center;
+      margin-bottom: 100px;
       @media (min-width: 768px) {
         margin-left: 4px;
       }
@@ -58,6 +71,9 @@ class SelfishSons extends React.Component {
       flex-direction: column;
       align-items: center;
       padding-top: 100px;
+      @media (max-width: 768px) {
+        padding-top: 0;
+      }
     `;
 
     const TextContent = styled.div`
@@ -107,14 +123,14 @@ class SelfishSons extends React.Component {
         <Layout
           isHome={false}
           sections={[]}
-          pages={["Music", "Talent", "Literary"]}
+          pages={["Team", "Music", "Talent", "Literary", "Contact"]}
         >
           <Main>
             <Container>
               <Content>
                 <Heading1>Gavin Magnus</Heading1>
+                <ImageGallery showPlayButton={false} items={images} />
 
-                <Img src={img1} />
                 <TextContent style={{ marginTop: "50px" }}>
                   Gavin Magnus is known for being a rap artist and huge social
                   media star on YouTube, Instagram, and Tik Tok. His social
@@ -127,8 +143,6 @@ class SelfishSons extends React.Component {
                   him one of their youngest signed artists to date. Released a
                   cover “Senorita” featuring Coco Quinn.
                 </TextContent>
-
-                <Img src={img2} />
 
                 <TextContent
                   style={{ marginTop: "50px", marginBottom: "150px" }}

@@ -89,7 +89,7 @@ class Music extends React.Component {
           <Layout
             isHome={false}
             sections={[]}
-            pages={["Music", "Talent", "Literary"]}
+            pages={["Team", "Music", "Talent", "Literary", "Contact"]}
           >
             <Content>
               <PortfolioOne title="Music" />

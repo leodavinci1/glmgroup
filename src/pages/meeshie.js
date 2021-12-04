@@ -2,9 +2,9 @@ import React from "react";
 import Helmet from "react-helmet";
 import { Container } from "react-bootstrap";
 import styled from "styled-components";
-import img1 from "../../static/img/selfishsons1.png";
-import img2 from "../../static/img/selfishsons2.png";
-import img3 from "../../static/img/selfishsons3.png";
+import img1 from "../../static/img/meeshie1.jpg";
+import img2 from "../../static/img/meeshie2.png";
+import img3 from "../../static/img/meeshie3.png";
 import logo from "../../static/img/logo.png";
 import Layout from "components/layout";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -132,35 +132,60 @@ class SelfishSons extends React.Component {
           <Main>
             <Container>
               <Content>
-                <Heading1>Selfish Sons</Heading1>
+                <Heading1>Meeshie</Heading1>
                 <ImageGallery showPlayButton={false} items={images} />
 
                 <TextContent style={{ marginTop: "50px" }}>
-                  Selfish Sons are a three-piece alternative rock band from
-                  Brisbane, Australia. Making rock music with pop sensibility,
-                  these brothers have established themselves as eccentric
-                  entertainers with a powerful sound.
+                  Michelle “Meeshie” Fahmy is the Los Angeles-based interior
+                  designer behind Haus of Meeshie. She was named one of
+                  Apartment Therapy’s 2021 Design Changemakers, a list of “the
+                  most talented and dynamic people in the design world,” and has
+                  been featured in The Wall Street Journal, Architectural
+                  Digest, Tastemade Home and Food52.
                 </TextContent>
 
                 <TextContent style={{ marginTop: "50px" }}>
-                  The rock outfit consists of brothers Jordy and Finn who met
-                  Jonty in a commercial audition waiting room at the age of 8.
-                  This spontaneous friendship grew tenfold through High School
-                  after realising that their love for infectious melodies and
-                  having a laugh was better suited to writing songs 'tongue in
-                  cheek' for an aptly named band, not getting kicked out of a
-                  classroom. This led to their eclectic amalgam of rock/pop
-                  nostalgia circa early 2000's.
+                  Michelle’s work is driven by her love of connecting with
+                  clients and the creative alchemy that comes from collaborating
+                  with a diverse circle of artisans and tradespeople to bring
+                  each client’s unique design dreams to life. She credits her
+                  passion for color, pattern play and art to her Egyptian
+                  background and to her father Walter Fahmy, an
+                  Impressionist/Fauvist painter and mixed media artist. This,
+                  along with her inside track into vintage sourcing and a
+                  fearlessness in mixing different eras and styles, defines the
+                  viewpoint of Haus of Meeshie: bold, eclectic and with a keen
+                  eye for artwork, but always making spaces a true reflection of
+                  the people they are designed for. Michelle’s philosophy for
+                  Haus of Meeshie is to be daring, whether that means working
+                  with an unexpected pattern combination, celebrating
+                  off-the-beaten-path colors or letting an eye-catching
+                  statement piece take center stage. Her ever-growing list of
+                  design influences include Mexican architect Luis Barragan,
+                  interior designer Ken Fulk and filmmaker Wes Anderson.
                 </TextContent>
 
+                <TextContent style={{ marginTop: "50px" }}>
+                  Before founding Haus of Meeshie, Michelle served as an
+                  Interior Designer at WFord Interiors, managing high-end
+                  residential projects in Southern California, and also appeared
+                  as a regular on E! Entertainment’s luxury home renovation
+                  series “Flip It Like Disick.” She began her career in event
+                  production and VIP services, contributing to event design for
+                  over 200 of The Getty Museum’s symposia, exhibition openings
+                  and private donor events annually. She also executed events
+                  for The Playboy Mansion, as well as major movie studio
+                  premiere parties and The Abbey’s annual Pride and Halloween
+                  festivities for global hospitality company sbe.
+                </TextContent>
                 <TextContent
                   style={{ marginTop: "50px", marginBottom: "150px" }}
                 >
-                  After many devious nights and failed cover attempts , the
-                  addictive energy of live shows became an obsession, leading to
-                  numerous tours and sold out shows across the East Coast. The
-                  band has developed a name as one of the most energetic and
-                  passionate upcoming acts.
+                  She currently lives in Los Angeles with her husband Aaron and
+                  their three spoiled rescue kitties, Liam, Luna and Pico, where
+                  she spends her free time renovating their midcentury A-frame
+                  cabin near Yosemite, Sugar Pine Haus, and tending to their
+                  constantly evolving backyard garden.
                 </TextContent>
               </Content>
             </Container>

@@ -4,9 +4,7 @@ import { graphql } from "gatsby";
 import Helmet from "react-helmet";
 import Hero from "sections/hero/Hero.js";
 import PortfolioOne from "sections/portfolio/PortfolioOne.js";
-import TeamTwo from "sections/team/TeamTwo.js";
 import ClientsOne from "sections/clients/ClientsOne.js";
-import ContactCreative from "sections/contact/ContactCreative.js";
 
 class Index extends React.Component {
   render() {
@@ -20,12 +18,10 @@ class Index extends React.Component {
         </Helmet>
         <Layout
           isHome={true}
-          sections={["team", "contact"]}
-          pages={["Music", "Talent", "Literary"]}
+          sections={[]}
+          pages={["Team", "Music", "Talent", "Literary", "Contact"]}
         >
           <Hero />
-          <TeamTwo />
-          <ContactCreative />
         </Layout>
       </div>
     );

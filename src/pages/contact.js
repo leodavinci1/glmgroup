@@ -1,31 +1,14 @@
 import React from "react";
 import Helmet from "react-helmet";
 import { Container } from "react-bootstrap";
-import Layout from "components/layout";
 import styled from "styled-components";
-import img1 from "../../static/img/belaro1.png";
-import img2 from "../../static/img/belaro2.png";
-import img3 from "../../static/img/belaro3.png";
-import logo from "../../static/img/logo.png";
-
-import ImageGallery from "react-image-gallery";
-import "react-image-gallery/styles/css/image-gallery.css";
+import Layout from "components/layout";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "scss/abstract.scss";
 
-const images = [
-  {
-    original: img1,
-  },
-  {
-    original: img2,
-  },
-  {
-    original: img3,
-  },
-];
+import ContactCreative from "sections/contact/ContactCreative.js";
 
-class Belaro extends React.Component {
+class SelfishSons extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -61,8 +44,8 @@ class Belaro extends React.Component {
     `;
 
     const Main = styled.div`
-      width: 100%;
       padding-top: 100px;
+      width: 100%;
       display: flex;
       align-items: center;
       background-color: #000;
@@ -84,7 +67,6 @@ class Belaro extends React.Component {
       font-size: 23px;
       color: white;
       line-height: 31px;
-
       @media (max-width: 767px) {
         font-size: 20px;
         padding: 0 20px;
@@ -111,9 +93,10 @@ class Belaro extends React.Component {
       left: 50px;
       top: 70px;
       z-index: 10;
+
       @media (max-width: 767px) {
-        z-index: 10000;
         position: fixed;
+        z-index: 10000;
         left: 50%;
         transform: translateX(-50%);
       }
@@ -122,7 +105,7 @@ class Belaro extends React.Component {
     return (
       <div>
         <Helmet>
-          <title>BELARO</title>
+          <title>Selfish Sons</title>
           <meta name="description" content="Page not found" />
         </Helmet>
         <Layout
@@ -133,38 +116,7 @@ class Belaro extends React.Component {
           <Main>
             <Container>
               <Content>
-                <Heading1>Belaro</Heading1>
-                <ImageGallery showPlayButton={false} items={images} />
-
-                <TextContent style={{ marginTop: "50px" }}>
-                  "BELARO has so much talent. Artistically, she’s absolutely
-                  brilliant" (LeFutureWave). "This is just pop at its finest"
-                  (A1234)! Blogs worldwide have discovered all the assets in
-                  BELARO which they look for in the biggest stars. But perhaps
-                  the LA powerhouse singer and songwriter's equally great
-                  achievements of late have been her placements on much coveted
-                  Spotify editorial playlists "just hits," "Fresh Finds" and
-                  "Fresh Finds: Pop."
-                </TextContent>
-
-                <TextContent style={{ marginTop: "50px" }}>
-                  On October 15, BELARO is set to release her 5th single
-                  “Sober.” A collaboration with legendary, multi-platinum and 2
-                  time Grammy nominated producer/songwriter Colby O’Donis who is
-                  also featured on Lady Gaga’s breakout hit “Just Dance”, the
-                  pop banger promises to appeal to all ages and demographics
-                  alike.
-                </TextContent>
-
-                <TextContent
-                  style={{ marginTop: "50px", marginBottom: "150px" }}
-                >
-                  BELARO has a tradition of crossing genres with her previous
-                  singles “Grateful”, a pop-trap ballad with a gospel touch,
-                  “Scarlet”, a modernized version of Dolly Parton's Jolene, and
-                  “Forever”, a disco-pop anthem with a relatable message about
-                  breaking up from toxic relationships.
-                </TextContent>
+                <ContactCreative />
               </Content>
             </Container>
           </Main>
@@ -174,4 +126,4 @@ class Belaro extends React.Component {
   }
 }
 
-export default Belaro;
+export default SelfishSons;

@@ -31,7 +31,7 @@ class Index extends React.Component {
             "clients",
             "contact",
           ]}
-          pages={["Music", "Talent", "Literary"]}
+          pages={["Team", "Music", "Talent", "Literary", "Contact"]}
         >
           <HeroPersonal />
           <AboutPersonal />

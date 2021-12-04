@@ -103,7 +103,7 @@ class Talent extends React.Component {
         <Layout
           isHome={false}
           sections={[]}
-          pages={["Music", "Talent", "Literary"]}
+          pages={["Team", "Music", "Talent", "Literary", "Contact"]}
         >
           <Main>
             <Content>
