@@ -1,12 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faGithub,
-  faLinkedin,
-  faTwitter,
-  faYoutube,
-} from "@fortawesome/free-brands-svg-icons";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 class Footer extends React.Component {
   render() {
@@ -33,25 +28,11 @@ class Footer extends React.Component {
     return (
       <FooterMain>
         <SocialIcons>
+          <span style={{ color: "#555" }}> © 2021 Good Life Management </span>
           <FontAwesomeIcon
-            icon={faGithub}
+            icon={faInstagram}
             className="social_icon"
-            onClick={() => window.open("https://www.github.com")}
-          />
-          <FontAwesomeIcon
-            icon={faTwitter}
-            className="social_icon"
-            onClick={() => window.open("https://www.twitter.com")}
-          />
-          <FontAwesomeIcon
-            icon={faYoutube}
-            className="social_icon"
-            onClick={() => window.open("https://www.youtube.com")}
-          />
-          <FontAwesomeIcon
-            icon={faLinkedin}
-            className="social_icon"
-            onClick={() => window.open("https://www.linkedin.com")}
+            onClick={() => window.open("https://www.instagram.com")}
           />
         </SocialIcons>
       </FooterMain>

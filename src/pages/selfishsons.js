@@ -9,6 +9,7 @@ import logo from "../../static/img/logo.png";
 import Layout from "components/layout";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "scss/abstract.scss";
+import spotify from "../../static/img/spotify.png";
 
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
@@ -97,11 +98,9 @@ class SelfishSons extends React.Component {
       }
     `;
 
-    const Logo = styled.img`
-      height: 80px;
-      @media (max-width: 1023px) {
-        height: 60px;
-      }
+    const Spotify = styled.img`
+      width: 200px;
+      margin-top: 50px;
     `;
 
     const LogoWrapper = styled.a`
@@ -134,7 +133,12 @@ class SelfishSons extends React.Component {
               <Content>
                 <Heading1>Selfish Sons</Heading1>
                 <ImageGallery showPlayButton={false} items={images} />
-
+                <a
+                  target="_blank"
+                  href="https://open.spotify.com/artist/5Fqu2dYwt7GFleLcxCEYKE?si=n2Z1NsFlRMGODXsH3E6QIA"
+                >
+                  <Spotify src={spotify} />
+                </a>
                 <TextContent style={{ marginTop: "50px" }}>
                   Selfish Sons are a three-piece alternative rock band from
                   Brisbane, Australia. Making rock music with pop sensibility,

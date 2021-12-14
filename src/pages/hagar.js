@@ -121,7 +121,7 @@ class SelfishSons extends React.Component {
     return (
       <div>
         <Helmet>
-          <title>Selfish Sons</title>
+          <title>Hagar Chemali</title>
           <meta name="description" content="Page not found" />
         </Helmet>
         <Layout
@@ -136,16 +136,21 @@ class SelfishSons extends React.Component {
                 <ImageGallery showPlayButton={false} items={images} />
 
                 <TextContent style={{ marginTop: "50px" }}>
-                  Hagar Hajjar Chemali is a political satirist, foreign policy
-                  expert, and host, writer, and producer of a world news show on
-                  YouTube called Oh My World! She worked in the U.S. government
-                  for 12 years in a range of senior national security and public
-                  affairs positions. She is a political commentator and writer
-                  on national security issues, and is featured regularly on
-                  MSNBC, CNN, BBC, Bloomberg, and Cheddar. She is also CEO and
-                  Founder of Greenwich Media Strategies, and a nonresident
-                  senior fellow with the Atlantic Council’s Economic Sanctions
-                  Initiative.
+                  <a target="_blank" href="https://www.hagarchemali.com/">
+                    Hagar Hajjar Chemali
+                  </a>{" "}
+                  is a political satirist, foreign policy expert, and host,
+                  writer, and producer of a world news show on YouTube called{" "}
+                  <a target="_blank" href="https://www.ohmyworld.tv/">
+                    Oh My World!
+                  </a>{" "}
+                  She worked in the U.S. government for 12 years in a range of
+                  senior national security and public affairs positions. She is
+                  a political commentator and writer on national security
+                  issues, and is featured regularly on MSNBC, CNN, BBC,
+                  Bloomberg, and Cheddar. She is also CEO and Founder of
+                  Greenwich Media Strategies, and a nonresident senior fellow
+                  with the Atlantic Council’s Economic Sanctions Initiative.
                 </TextContent>
 
                 <TextContent style={{ marginTop: "50px" }}>

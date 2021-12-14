@@ -121,7 +121,7 @@ class SelfishSons extends React.Component {
     return (
       <div>
         <Helmet>
-          <title>Selfish Sons</title>
+          <title>Meeshie</title>
           <meta name="description" content="Page not found" />
         </Helmet>
         <Layout
@@ -137,11 +137,14 @@ class SelfishSons extends React.Component {
 
                 <TextContent style={{ marginTop: "50px" }}>
                   Michelle “Meeshie” Fahmy is the Los Angeles-based interior
-                  designer behind Haus of Meeshie. She was named one of
-                  Apartment Therapy’s 2021 Design Changemakers, a list of “the
-                  most talented and dynamic people in the design world,” and has
-                  been featured in The Wall Street Journal, Architectural
-                  Digest, Tastemade Home and Food52.
+                  designer behind{" "}
+                  <a target="_blank" href="https://www.hausofmeeshie.com/">
+                    Haus of Meeshie
+                  </a>
+                  . She was named one of Apartment Therapy’s 2021 Design
+                  Changemakers, a list of “the most talented and dynamic people
+                  in the design world,” and has been featured in The Wall Street
+                  Journal, Architectural Digest, Tastemade Home and Food52.
                 </TextContent>
 
                 <TextContent style={{ marginTop: "50px" }}>

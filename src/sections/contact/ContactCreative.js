@@ -103,36 +103,6 @@ class ContactCreative extends React.Component {
               </ContactCol>
             </FormRow>
           </AnimationContainer>
-          <IconRow>
-            <IconCol md={6}>
-              <AnimationContainer animation="fadeIn" delay={500}>
-                <InfoPart>
-                  <Info>
-                    <InfoTitle>Email</InfoTitle>
-                    <InfoLinkContainer>
-                      <InfoLink href="mailto:email@yoursite.com">
-                        email@yoursite.com
-                      </InfoLink>
-                    </InfoLinkContainer>
-                  </Info>
-                </InfoPart>
-              </AnimationContainer>
-            </IconCol>
-            <IconCol md={6}>
-              <AnimationContainer animation="fadeIn" delay={1000}>
-                <InfoPart>
-                  <Info>
-                    <InfoTitle>Phone</InfoTitle>
-                    <InfoLinkContainer>
-                      <InfoLink href="tel:+(123)123-1234">
-                        (123) 456-7890
-                      </InfoLink>
-                    </InfoLinkContainer>
-                  </Info>
-                </InfoPart>
-              </AnimationContainer>
-            </IconCol>
-          </IconRow>
         </Container>
       </Section>
     );

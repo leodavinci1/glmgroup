@@ -104,7 +104,7 @@ class SelfishSons extends React.Component {
     return (
       <div>
         <Helmet>
-          <title>Selfish Sons</title>
+          <title>Our Team</title>
           <meta name="description" content="Page not found" />
         </Helmet>
         <Layout

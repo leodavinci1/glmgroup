@@ -14,7 +14,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-s3`,
       options: {
-        bucketName: "codingleo",
+        bucketName: "glmprojects.com",
       },
     },
     {

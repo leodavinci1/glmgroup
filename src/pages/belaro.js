@@ -6,7 +6,7 @@ import styled from "styled-components";
 import img1 from "../../static/img/belaro1.png";
 import img2 from "../../static/img/belaro2.png";
 import img3 from "../../static/img/belaro3.png";
-import logo from "../../static/img/logo.png";
+import spotify from "../../static/img/spotify.png";
 
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
@@ -99,11 +99,9 @@ class Belaro extends React.Component {
       }
     `;
 
-    const Logo = styled.img`
-      height: 80px;
-      @media (max-width: 1023px) {
-        height: 60px;
-      }
+    const Spotify = styled.img`
+      width: 200px;
+      margin-top: 50px;
     `;
 
     const LogoWrapper = styled.a`
@@ -135,6 +133,13 @@ class Belaro extends React.Component {
               <Content>
                 <Heading1>Belaro</Heading1>
                 <ImageGallery showPlayButton={false} items={images} />
+
+                <a
+                  target="_blank"
+                  href="https://open.spotify.com/artist/3XUsaUWtL1t1L2aAq2rwOd?si=7hnijnhnQE-1igq2tFyGow"
+                >
+                  <Spotify src={spotify} />
+                </a>
 
                 <TextContent style={{ marginTop: "50px" }}>
                   "BELARO has so much talent. Artistically, she’s absolutely

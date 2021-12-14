@@ -20,7 +20,7 @@ class Layout extends React.Component {
           sections={this.props.sections}
           pages={this.props.pages}
         />
-        <PageRevealer />
+        {this.props.isHome ? <PageRevealer /> : <></>}
         <div>{children}</div>
         <Footer />
       </div>

@@ -8,6 +8,7 @@ import "react-image-gallery/styles/css/image-gallery.css";
 
 import Layout from "components/layout";
 import logo from "../../static/img/logo.png";
+import spotify from "../../static/img/spotify.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "scss/abstract.scss";
 import ImageGallery from "react-image-gallery";
@@ -94,11 +95,9 @@ class SelfishSons extends React.Component {
       }
     `;
 
-    const Logo = styled.img`
-      height: 80px;
-      @media (max-width: 1023px) {
-        height: 60px;
-      }
+    const Spotify = styled.img`
+      width: 200px;
+      margin-top: 50px;
     `;
 
     const LogoWrapper = styled.a`
@@ -130,7 +129,12 @@ class SelfishSons extends React.Component {
               <Content>
                 <Heading1>Gavin Magnus</Heading1>
                 <ImageGallery showPlayButton={false} items={images} />
-
+                <a
+                  target="_blank"
+                  href="https://open.spotify.com/artist/2R111dG82I23SltNvwEdeQ?si=uMyQ7tlgQnK6I_heE2AIrg"
+                >
+                  <Spotify src={spotify} />
+                </a>
                 <TextContent style={{ marginTop: "50px" }}>
                   Gavin Magnus is known for being a rap artist and huge social
                   media star on YouTube, Instagram, and Tik Tok. His social
