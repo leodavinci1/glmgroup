@@ -33,10 +33,10 @@ class PageRevealer extends React.Component {
         <AnimationContainer animation="fadeIn">
           <BaffleText
             text="GOOD LIFE MANAGEMENT"
-            revealDuration={500}
-            revealDelay={1000}
+            revealDuration={400}
+            revealDelay={100}
             parentMethod={this.reveal}
-            callMethodTime={2000}
+            callMethodTime={1200}
           />
         </AnimationContainer>
       );

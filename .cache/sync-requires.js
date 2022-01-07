@@ -8,6 +8,7 @@ exports.components = {
   "component---cache-dev-404-page-js": hot(preferDefault(require("C:\\Users\\leo\\Documents\\projects\\lightspace\\glmgroup\\.cache\\dev-404-page.js"))),
   "component---src-pages-404-js": hot(preferDefault(require("C:\\Users\\leo\\Documents\\projects\\lightspace\\glmgroup\\src\\pages\\404.js"))),
   "component---src-pages-belaro-js": hot(preferDefault(require("C:\\Users\\leo\\Documents\\projects\\lightspace\\glmgroup\\src\\pages\\belaro.js"))),
+  "component---src-pages-colby-js": hot(preferDefault(require("C:\\Users\\leo\\Documents\\projects\\lightspace\\glmgroup\\src\\pages\\colby.js"))),
   "component---src-pages-contact-js": hot(preferDefault(require("C:\\Users\\leo\\Documents\\projects\\lightspace\\glmgroup\\src\\pages\\contact.js"))),
   "component---src-pages-creative-2-index-js": hot(preferDefault(require("C:\\Users\\leo\\Documents\\projects\\lightspace\\glmgroup\\src\\pages\\creative-2\\index.js"))),
   "component---src-pages-creative-video-1-index-js": hot(preferDefault(require("C:\\Users\\leo\\Documents\\projects\\lightspace\\glmgroup\\src\\pages\\creative-video-1\\index.js"))),
@@ -21,6 +22,7 @@ exports.components = {
   "component---src-pages-personal-index-js": hot(preferDefault(require("C:\\Users\\leo\\Documents\\projects\\lightspace\\glmgroup\\src\\pages\\personal\\index.js"))),
   "component---src-pages-personal-video-index-js": hot(preferDefault(require("C:\\Users\\leo\\Documents\\projects\\lightspace\\glmgroup\\src\\pages\\personal-video\\index.js"))),
   "component---src-pages-selfishsons-js": hot(preferDefault(require("C:\\Users\\leo\\Documents\\projects\\lightspace\\glmgroup\\src\\pages\\selfishsons.js"))),
+  "component---src-pages-sexton-js": hot(preferDefault(require("C:\\Users\\leo\\Documents\\projects\\lightspace\\glmgroup\\src\\pages\\sexton.js"))),
   "component---src-pages-talent-js": hot(preferDefault(require("C:\\Users\\leo\\Documents\\projects\\lightspace\\glmgroup\\src\\pages\\talent.js"))),
   "component---src-pages-team-js": hot(preferDefault(require("C:\\Users\\leo\\Documents\\projects\\lightspace\\glmgroup\\src\\pages\\team.js")))
 }

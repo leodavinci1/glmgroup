@@ -2,25 +2,14 @@ import React from "react";
 import Helmet from "react-helmet";
 import { Container } from "react-bootstrap";
 import styled from "styled-components";
-import img1 from "../../static/img/galvinmagnus.jpg";
-import img2 from "../../static/img/galvinmagnus2.jpg";
-import "react-image-gallery/styles/css/image-gallery.css";
-
+import Image from "../../static/img/sexton1.png";
 import Layout from "components/layout";
-import logo from "../../static/img/logo.png";
-import spotify from "../../static/img/spotify.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "scss/abstract.scss";
-import ImageGallery from "react-image-gallery";
+import spotify from "../../static/img/spotify.png";
 
-const images = [
-  {
-    original: img1,
-  },
-  {
-    original: img2,
-  },
-];
+import ImageGallery from "react-image-gallery";
+import "react-image-gallery/styles/css/image-gallery.css";
 
 class SelfishSons extends React.Component {
   constructor(props) {
@@ -72,7 +61,7 @@ class SelfishSons extends React.Component {
       flex-direction: column;
       align-items: center;
       padding-top: 100px;
-      @media (max-width: 768px) {
+      @media (max-width: 767px) {
         padding-top: 0;
       }
     `;
@@ -104,10 +93,11 @@ class SelfishSons extends React.Component {
       position: fixed;
       left: 50px;
       top: 70px;
+      z-index: 10;
 
       @media (max-width: 767px) {
-        z-index: 10000;
         position: fixed;
+        z-index: 10000;
         left: 50%;
         transform: translateX(-50%);
       }
@@ -116,8 +106,8 @@ class SelfishSons extends React.Component {
     return (
       <div>
         <Helmet>
-          <title>Gavin Magnus</title>
-          <meta name="description" content="Page not found" />
+          <title>SEXTON</title>
+          <meta name="description" content="Colby  O'Donis" />
         </Helmet>
         <Layout
           isHome={false}
@@ -127,7 +117,8 @@ class SelfishSons extends React.Component {
           <Main>
             <Container>
               <Content>
-                <Heading1>Gavin Magnus</Heading1>
+                <Heading1>SEXTON</Heading1>
+                <Img src={Image} />
                 <a href="/music">
                   <svg
                     style={{ position: "absolute", left: "30px", top: "20px" }}
@@ -147,38 +138,40 @@ class SelfishSons extends React.Component {
                     ></path>
                   </svg>
                 </a>
-                <ImageGallery showPlayButton={false} items={images} />
                 <a
                   target="_blank"
-                  href="https://open.spotify.com/artist/2R111dG82I23SltNvwEdeQ?si=uMyQ7tlgQnK6I_heE2AIrg"
+                  href="https://open.spotify.com/artist/0k4gmF1Uhpyb8uCHz2fGU2?si=L-tzVMUfTOK1IN19PtObUg"
                 >
                   <Spotify src={spotify} />
                 </a>
                 <TextContent style={{ marginTop: "50px" }}>
-                  Gavin Magnus is known for being a rap artist and huge social
-                  media star on YouTube, Instagram, and Tik Tok. His social
-                  media channels generated over 50 million views and have
-                  reached over ten million incredible fans across YouTube,
-                  Instagram and Tik Tok. He is also known for featured films
-                  such as his role of Byron in "Timecrafters" a film alongside
-                  Denise Richards. Gavin toured in the Boys Of Summer Tour in
-                  2018, and signed a record deal with Columbia Records, making
-                  him one of their youngest signed artists to date. Released a
-                  cover “Senorita” featuring Coco Quinn.
+                  Born in Perth, Australia, Sexton started writing music at ten
+                  years old while playing guitar in a band. She grew up heavily
+                  influenced by Rock and Hip Hop and after surviving a brush
+                  with death in a motor-vehicle accident, Sexton committed
+                  herself to living life without fear and began pursuing her
+                  dream in LA. Having already peaked at #8 on Billboard’s
+                  charts, #4 on MTV’s TRL, with over 50 million streams on a
+                  single, Sexton has worked with top industry producers such as
+                  Timbaland, Scott Storch, J White, OG Parker, XL and many more.
                 </TextContent>
 
                 <TextContent
-                  style={{ marginTop: "50px", marginBottom: "150px" }}
+                  style={{ marginTop: "50px", marginBottom: "50px" }}
                 >
-                  Senorita has now reached more than 60 million views in two
-                  years. He was recently ranked #1 for 'most popular 14 year
-                  old' on Famous Birthdays. Gavin has 14 music videos, most of
-                  which have gone viral, making him a music teen icon. Recently,
-                  his viral song “Hearts On A Pendant” was featured on MTV’s
-                  Siesta Key. Most importantly, Gavin is an animal activist,
-                  often involved in hospitals charity events with a huge heart
-                  for helping others and has used his influence several times to
-                  raise awareness for school harassment.
+                  Her songwriting ability has caught the ears of different
+                  artists including Chris Brown, who recorded a song she wrote
+                  for him as a potential single for him to release and also
+                  posted Sexton singing her single “Childhood Demons” on his
+                  Instagram page to his 96 million Instagram followers. She has
+                  song collaborations with artists such as Trippie Redd, who’s
+                  album just peaked at #1 on the Billboard charts, as well as
+                  rappers Smoke Purpp (3 million monthly listeners and 3.7
+                  million Instagram followers) and Lil Got It part of Young
+                  Thug’s YSL collective. Sexton has performed for up to 10,000
+                  people opening for acts such as Lil Wayne. 2Chainz, The Migos
+                  and many more. Sexton is the next powerhouse female rockstar
+                  to change the face of music.
                 </TextContent>
               </Content>
             </Container>

@@ -1,5 +1,5 @@
 import React from "react";
-import styled, { keyframes } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 import RevealContent from "components/reveal-content";
 import Tilt from "react-tilt";
 import DesktopContent from "./DesktopContent.js";
@@ -83,14 +83,19 @@ class PortfolioItem extends React.Component {
       display: flex;
       align-items: flex-end;
       visibility: visible;
-      background-image: linear-gradient(
-        to top,
-        rgb(166, 124, 0),
-        rgba(255, 255, 255, 0)
-      );
+
       @media (min-width: 1025px) {
         display: none !important;
       }
+      ${this.props.category === "LITERARY"
+        ? css``
+        : css`
+            background-image: linear-gradient(
+              to top,
+              rgb(166, 124, 0),
+              rgba(255, 255, 255, 0)
+            );
+          `}
     `;
     const Item = styled.div`
       position: relative;
@@ -134,7 +139,7 @@ class PortfolioItem extends React.Component {
         }
       }
     `;
-    console.log(this.props);
+
     if (this.props.type === "slider") {
       console.log(this.props);
       return (
@@ -151,6 +156,7 @@ class PortfolioItem extends React.Component {
               <DesktopContent
                 text={this.props.text}
                 category={this.props.description}
+                info={this.props.category}
                 ref={(cd) => (this.child = cd)}
                 type={this.props.type}
               />
@@ -159,7 +165,7 @@ class PortfolioItem extends React.Component {
         </a>
       );
     } else {
-      return (
+      return this.props.link ? (
         <a href={this.props.link}>
           <Tilt options={{ scale: 1, max: 10 }}>
             <Item
@@ -178,12 +184,39 @@ class PortfolioItem extends React.Component {
               <DesktopContent
                 text={this.props.text}
                 category={this.props.description}
+                info={this.props.category}
                 ref={(cd) => (this.child = cd)}
                 type={this.props.type}
               />
             </Item>
           </Tilt>
         </a>
+      ) : (
+        <>
+          <Tilt options={{ scale: 1, max: 10 }}>
+            <Item
+              className={`${
+                this.props.index % 2 === 0 ? "move-up" : "move-down"
+              }`}
+              id={`portfolio-item-${this.props.index}`}
+            >
+              {this.showImage()}
+              <MobileContent>
+                <Text>
+                  <Heading>{this.props.text}</Heading>
+                  <SubHeading>{this.props.description}</SubHeading>
+                </Text>
+              </MobileContent>
+              <DesktopContent
+                text={this.props.text}
+                category={this.props.description}
+                info={this.props.category}
+                ref={(cd) => (this.child = cd)}
+                type={this.props.type}
+              />
+            </Item>
+          </Tilt>
+        </>
       );
     }
   }

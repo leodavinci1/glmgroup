@@ -5,6 +5,7 @@ exports.components = {
   "component---cache-dev-404-page-js": () => import("./dev-404-page.js" /* webpackChunkName: "component---cache-dev-404-page-js" */),
   "component---src-pages-404-js": () => import("./../src/pages/404.js" /* webpackChunkName: "component---src-pages-404-js" */),
   "component---src-pages-belaro-js": () => import("./../src/pages/belaro.js" /* webpackChunkName: "component---src-pages-belaro-js" */),
+  "component---src-pages-colby-js": () => import("./../src/pages/colby.js" /* webpackChunkName: "component---src-pages-colby-js" */),
   "component---src-pages-contact-js": () => import("./../src/pages/contact.js" /* webpackChunkName: "component---src-pages-contact-js" */),
   "component---src-pages-creative-2-index-js": () => import("./../src/pages/creative-2/index.js" /* webpackChunkName: "component---src-pages-creative-2-index-js" */),
   "component---src-pages-creative-video-1-index-js": () => import("./../src/pages/creative-video-1/index.js" /* webpackChunkName: "component---src-pages-creative-video-1-index-js" */),
@@ -18,6 +19,7 @@ exports.components = {
   "component---src-pages-personal-index-js": () => import("./../src/pages/personal/index.js" /* webpackChunkName: "component---src-pages-personal-index-js" */),
   "component---src-pages-personal-video-index-js": () => import("./../src/pages/personal-video/index.js" /* webpackChunkName: "component---src-pages-personal-video-index-js" */),
   "component---src-pages-selfishsons-js": () => import("./../src/pages/selfishsons.js" /* webpackChunkName: "component---src-pages-selfishsons-js" */),
+  "component---src-pages-sexton-js": () => import("./../src/pages/sexton.js" /* webpackChunkName: "component---src-pages-sexton-js" */),
   "component---src-pages-talent-js": () => import("./../src/pages/talent.js" /* webpackChunkName: "component---src-pages-talent-js" */),
   "component---src-pages-team-js": () => import("./../src/pages/team.js" /* webpackChunkName: "component---src-pages-team-js" */)
 }

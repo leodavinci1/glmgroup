@@ -2,7 +2,7 @@
 id: 1
 image: "./image.webp"
 title: "Gavin Magnus"
-category: "MUSIC"
+category: ""
 description: ""
 link: "/gavinmagnus"
 ---

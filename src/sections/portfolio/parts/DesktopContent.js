@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 class DesktopContent extends React.Component {
   constructor(props) {
@@ -15,17 +15,27 @@ class DesktopContent extends React.Component {
   };
 
   render() {
+    console.log(this.props.category);
     const Text = styled.div`
       @media (max-width: 1024px) {
         display: none !important;
       }
-      background-image: linear-gradient(
-        to top,
-        rgb(166, 124, 0),
-        rgba(255, 255, 255, 0)
-      );
+      ${this.props.info === "LITERARY"
+        ? css`
+            background: black;
+            height: 80px !important;
+            bottom: 0;
+          `
+        : css`
+            background-image: linear-gradient(
+              to top,
+              rgb(166, 124, 0),
+              rgba(255, 255, 255, 0)
+            );
+            top: 0;
+          `}
       position: absolute;
-      top: 0;
+
       opacity: 1;
       height: 100%;
       width: 100%;

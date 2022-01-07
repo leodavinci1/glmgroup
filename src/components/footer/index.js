@@ -7,33 +7,35 @@ class Footer extends React.Component {
   render() {
     const FooterMain = styled.div`
       background-color: #111;
-      height: 50px;
+      height: 60px;
       display: flex;
       align-items: center;
       justify-content: center;
     `;
 
     const SocialIcons = styled.div`
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       .social_icon {
         font-size: 15px;
-        color: #555;
+        color: #a67c00;
         margin: 0 5px;
         cursor: pointer;
         transition: 0.5s;
-        &:hover {
-          color: #a67c00;
-        }
+        width: 20px;
+        height: 20px;
       }
     `;
     return (
       <FooterMain>
         <SocialIcons>
-          <span style={{ color: "#555" }}> © 2021 Good Life Management </span>
           <FontAwesomeIcon
             icon={faInstagram}
             className="social_icon"
             onClick={() => window.open("https://www.instagram.com")}
           />
+          <span style={{ color: "#555" }}> © 2021 Good Life Management </span>
         </SocialIcons>
       </FooterMain>
     );

@@ -22,6 +22,7 @@ class ContactOneForm extends React.Component {
       this.setState({ error: true });
     } else {
       this.setState({ error: false });
+      console.log(this.state);
     }
     this.forceUpdate();
   }

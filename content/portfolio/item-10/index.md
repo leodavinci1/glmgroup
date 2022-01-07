@@ -4,5 +4,5 @@ image: "./matt.jpeg"
 title: "Matt Zeller"
 category: "LITERARY"
 description: "Writer, News Commentator, Author, Speaker"
-link: "https://www.mattzeller.co"
+link: "https://mattzeller.co"
 ---
